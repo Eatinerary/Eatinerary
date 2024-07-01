@@ -1,0 +1,144 @@
+:root {
+    /* Colors */
+    --theme-primary: hsl(0, 0%, 5%);
+    --theme-on-primary: hsl(0, 0%, 90%);
+    --theme-primary--hover: #000;
+    --theme-secondary: #ffffff;
+    --theme-on-secondary: #000000;
+    --theme-secondary--hover: #ffffff;
+  
+    --theme-background: linear-gradient(135deg, #2d214f, #1f2e5d); /* Adjusted dark blueish-purple gradient */
+    --theme-on-background: hsl(0, 0%, 98%);
+  
+    --theme-surface-1: hsl(0, 0%, 92%);
+    --theme-on-surface-1: hsl(0, 0%, 10%);
+  
+    /* Typography */
+    --step--2: clamp(0.75rem, calc(0.7rem + 0.1vw), 0.9rem); /* Adjusted smaller font size */
+    --step--1: clamp(0.9rem, calc(0.8rem + 0.2vw), 1.1rem); /* Adjusted smaller font size */
+    --step-0: clamp(1.1rem, calc(1rem + 0.4vw), 1.4rem); /* Adjusted smaller font size */
+    --step-1: clamp(1.3rem, calc(1.2rem + 0.6vw), 1.8rem); /* Adjusted smaller font size */
+    --step-2: clamp(1.6rem, calc(1.4rem + 0.9vw), 2.2rem); /* Adjusted smaller font size */
+    --step-3: clamp(1.9rem, calc(1.6rem + 1.2vw), 2.8rem); /* Adjusted smaller font size */
+    --step-4: clamp(2.3rem, calc(1.8rem + 1.6vw), 3.6rem); /* Adjusted smaller font size */
+    --step-5: clamp(2.8rem, calc(2.2rem + 2.2vw), 4.4rem); /* Adjusted smaller font size */
+  
+    --font-family-heading: 'Roboto Flex', sans-serif;
+    --font-family-body: 'Open Sans', sans-serif;
+  
+    --body-max-width: 1920px;
+  
+    /* Container */
+    --container-padding: 0 1rem;
+    --container-max-width: 1440px;
+    --container-max-width-narrow: 960px;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0 auto;
+    color: var(--theme-on-background);
+    font-size: var(--step--1); /* Adjusted smaller font size */
+    font-family: var(--font-family-body);
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: var(--body-max-width);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: var(--theme-background);
+    text-align: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .title {
+    font-size: var(--step-3); /* Adjusted smaller font size */
+    font-family: var(--font-family-heading);
+    font-weight: 600;
+    line-height: 1.2;
+    font-stretch: 125%;
+    font-variation-settings: 'slnt' -4, 'opsz' 25;
+  }
+  
+  .slogan {
+    font-size: var(--step--1); /* Adjusted smaller font size */
+    font-family: var(--font-family-heading);
+    font-weight: 400;
+    margin: 10px 0;
+  }
+  
+  .coming-soon {
+    font-size: var(--step-2); /* Adjusted smaller font size */
+    font-family: var(--font-family-heading);
+    font-weight: 500;
+    margin: 20px 0 0;
+  }
+  
+  .newsletter {
+    margin-top: 20px;
+  }
+  
+  .newsletter p {
+    font-size: var(--step--1);
+    margin-bottom: 10px;
+  }
+  
+  .newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .newsletter input[type="email"] {
+    padding: 8px;
+    font-size: var(--step--2); /* Adjusted smaller font size */
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    outline: none;
+  }
+  
+  .newsletter button {
+    padding: 8px 16px;
+    font-size: var(--step--2); /* Adjusted smaller font size */
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #2d214f, #1f2e5d); /* Gradient background for button */
+    color: var(--theme-on-background);
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .newsletter button:hover {
+    background: linear-gradient(135deg, #1f2e5d, #2d214f); /* Gradient background for button hover */
+    color: var(--theme-on-primary);
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Global fade in animation */
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-in[data-state="visible"] {
+      transition: transform 700ms cubic-bezier(0.42, 0, 0.32, 1.17), opacity 1000ms cubic-bezier(0.42, 0, 0.32, 1.17) 200ms;
+    }
+  
+    .fade-in[data-state="hidden"] {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+  }
+  

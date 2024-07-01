@@ -1,5 +1,10 @@
 // script.js
 
+
+
+
+
+
 async function findRestaurants() {
     const url = 'https://api.groq.com/openai/v1/chat/completions';
     const apiKey = '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'; // Replace with your actual Groq API key
@@ -86,6 +91,10 @@ function displayResults(results) {
         resultsDiv.appendChild(restaurantDiv);
     });
 }
+
+
+
+
 
 // Event listener for the find restaurants button
 document.getElementById('find-restaurants-btn').addEventListener('click', findRestaurants);

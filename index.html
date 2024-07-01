@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eatinerary - Coming Soon</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eatinerary</title>
+  <meta name="description" content="Eatinerary: Your ultimate AI-powered travel and restaurant planner.">
+
+  <!-- Open Graph Metadata -->
+  <meta property="og:title" content="Eatinerary">
+  <meta property="og:description" content="Your ultimate AI-powered travel and restaurant planner.">
+  <meta property="og:image" content="path/to/your/image.jpg">
+  <meta property="og:url" content="https://yourwebsite.com">
+
+  <!-- Twitter Card Metadata -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Eatinerary">
+  <meta name="twitter:description" content="Your ultimate AI-powered travel and restaurant planner.">
+  <meta name="twitter:image" content="path/to/your/image.jpg">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container fade-in" data-state="visible">
-        <h1 class="title">Eatinerary 🌍</h1>
-        <p class="slogan">Taste the World, One Journey at a Time 🍽️</p>
-        <p class="coming-soon">Coming Soon 🚀</p>
-        <div class="newsletter">
-            <p id="subscribeText">Be first to know when our site is live 📧</p>
-            <form id="subscribeForm" action="#">
-                <input id="emailInput" type="email" placeholder="Enter your email" required>
-                <button type="submit" id="submitButton">Notify Me</button>
-            </form>
-        </div>
-        <p id="successMessage" class="hidden">You are now subscribed! 🎉</p>
+  <div class="container">
+    <h1 class="title">Eatinerary</h1>
+    <p class="slogan">Your ultimate AI-powered travel and restaurant planner</p>
+    <p class="coming-soon">🌟 Coming Soon! 🌟</p>
+    <div class="newsletter">
+      <p>Be the first to know when our site is live:</p>
+      <form id="newsletterForm">
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <button type="submit">Notify Me</button>
+      </form>
+      <p id="subscribeMessage" class="hidden">You are now subscribed!</p>
     </div>
+  </div>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
